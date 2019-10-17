@@ -1,0 +1,127 @@
+
+.slider  {
+    max-height: 540px;  
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    .slider-img {
+        background-image: url('../img/bg-slider.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100vh;
+        max-height: 540px;
+        display: inherit;
+        img {
+            margin: auto;
+            padding: 25px;
+        }
+    }
+}
+.slider-wrappr {
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    .block-dec {
+        padding-top: 20px;
+        padding-left: 20px;
+        .title-bold {
+            padding-right:40px;
+        }
+        .read-more {
+            position: absolute;
+	        bottom: 50px;
+        }
+    }
+}
+
+.list-slider {
+    margin-bottom: auto;
+	margin-top: auto;
+	width: 60px;
+	position: absolute;
+	z-index: 1;
+    right: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+    img {
+        width: 100%;
+    }
+    .active {
+        border: 2px solid $primary;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    top: 30px;
+    bottom: inherit;
+    opacity: 1;
+    height: 30px;
+    width: 40px;
+    margin: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.block-buy {
+    h4 {
+        padding: 0;
+    }
+    margin-bottom: 20px;
+}
+
+.block-count-item {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background: black;
+    color: white;
+    padding: 10px;
+}
+
+@include media-breakpoint-up(md) {
+    .slider  {
+        .slider-img {
+            img {
+                padding: 45px 45px 45px 25px;
+            }
+        }
+    }
+
+    .carousel-control-prev {
+        right: 0;
+        left: inherit;
+    }
+    
+    .carousel-control-next {
+        right: -40px;
+    }
+
+    .slider-wrappr {
+        .carousel-item.active 
+        {  
+             display: -webkit-box;
+            display: -moz-box;
+            display: -ms-box;
+            display: box;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .list-slider ,
+    .tabs-descreption {
+        display: none;
+    }
+    .carousel-item {
+        .read-more {
+            display: none;
+        }
+    }
+}

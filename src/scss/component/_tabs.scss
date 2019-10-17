@@ -1,0 +1,30 @@
+.nav-tabs {
+    .nav-link{
+        color: $gray-500;
+        border-bottom: 1px solid $gray-500;
+        padding-right: 15px;
+        &:hover,
+        &.active{
+            color: black;
+            border-bottom: 2px solid $secondary;
+        }
+    }
+}
+.tab-content {
+    color: $gray-500;
+    padding: 15px 0px 40px;
+}
+.block-buy {
+    display: flex;
+    align-items: center;
+    h4 {
+        margin: 0;
+    }
+}
+.read-more {
+    color: $secondary;
+    border-bottom: 2px solid $secondary;
+    &:hover{
+       color: $secondary;
+    }
+}

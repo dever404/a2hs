@@ -1,0 +1,36 @@
+.navbar-nav {
+    margin-left: 140px;
+    .nav-item {
+        text-transform: uppercase;
+        margin-right: 5px;
+        &:hover ,
+        &.active {
+            background: $primary;
+            a{
+                color: $white;
+            }
+        }
+    }
+    .nav-item-awsome {
+        background: white;
+        border-radius: 100%;
+        padding: 5px 0px;
+        margin-right: 9px;
+        text-align: center;
+        &:hover {
+            background: $black;
+        }
+    }
+}
+
+header {
+    .title {
+        margin-top: 150px;
+        margin-bottom: 150px;
+        font-family: $font-family-monospace;
+        font-style: italic;
+        h6{
+            color: $white;
+        }
+    }
+}
