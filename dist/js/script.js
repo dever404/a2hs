@@ -1,0 +1,1 @@
+console.log("service js"),"serviceWorker"in navigator&&(console.log("serviceWorker load"),navigator.serviceWorker.register("/sw.js").then(function(e){console.log("Service Worker registered ",e)}).catch(function(e){console.error("Service Worker fial ",e)}));
