@@ -5,9 +5,9 @@ if(window.isSecureContext){
     alert('serviceWorker load');
     navigator.serviceWorker.register('/a2hs/sw.js')
     .then(function (reg) {
-        alert("Service Worker registered ",reg); // console.log(reg);
+        alert("Service Worker registered "); // console.log(reg);
     }).catch(function (err) {
-       alert("Service Worker fial ",err); // console.error(err);
+       alert("Service Worker fial "); // console.error(err);
     });
 }  
 else {
