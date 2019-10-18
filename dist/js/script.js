@@ -1,15 +1,14 @@
 console.log('service js');
 
 if ('serviceWorker' in navigator) {
-//if(window.isSecureContext){
     console.log('serviceWorker load');
-    navigator.serviceWorker.register('/a2hs/sw.js')
+    navigator.serviceWorker.register('/sw.js')
     .then(function (reg) {
-        console.log("Service Worker registered "); // console.log(reg);
+        console.log("Service Worker registered ",reg); // console.log(reg);
     }).catch(function (err) {
-       console.log("Service Worker fial "); // console.error(err);
+        console.error("Service Worker fial ",err); // console.error(err);
     });
-}  
+}   
 else {
      console.log('Your browser does not support the Service-Worker!');
 }
