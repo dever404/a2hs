@@ -1,11 +1,11 @@
-alert('sw');
+console.log('sw');
 self.addEventListener('fetch', function(event) {
-    alert('fetch');
+    console.log('fetch');
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
             // Cache hit - return response
-            alert('response');
+            console.log('response');
             if (response) {
             return response;
             }
