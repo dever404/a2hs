@@ -1,6 +1,7 @@
 alert('service js');
 
-if ('serviceWorker' in navigator) {
+//if ('serviceWorker' in navigator) {
+if(window.isSecureContext){
     alert('serviceWorker load');
     navigator.serviceWorker.register('/a2hs/sw.js')
     .then(function (reg) {
