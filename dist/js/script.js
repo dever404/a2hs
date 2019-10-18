@@ -1,36 +1,15 @@
-alert('service js');
+console.log('service js');
 
 if ('serviceWorker' in navigator) {
 //if(window.isSecureContext){
-    alert('serviceWorker load');
+    console.log('serviceWorker load');
     navigator.serviceWorker.register('/a2hs/sw.js')
     .then(function (reg) {
-        alert("Service Worker registered "); // console.log(reg);
+        console.log("Service Worker registered "); // console.log(reg);
     }).catch(function (err) {
-       alert("Service Worker fial "); // console.error(err);
+       console.log("Service Worker fial "); // console.error(err);
     });
 }  
 else {
-     alert('Your browser does not support the Service-Worker!');
-}
-
-// Detects if device is on iOS 
-var isIos = function isIos() {
-  alert('device is on iOS ');
-  var userAgent = window.navigator.userAgent.toLowerCase();
-  return /iphone|ipad|ipod/.test(userAgent);
-}; // Detects if device is in standalone mode
-
-
-var isInStandaloneMode = function isInStandaloneMode() {
-  alert('isInStandaloneMode');
-  return 'standalone' in window.navigator && window.navigator.standalone;
-}; // Checks if should display install popup notification:
-
-
-if (isIos() && !isInStandaloneMode()) {
-    alert('isIos 3');
-  (void 0).setState({
-    showInstallMessage: true
-  });
+     console.log('Your browser does not support the Service-Worker!');
 }
