@@ -9,3 +9,6 @@ if ('serviceWorker' in navigator) {
         console.error("Service Worker fial ",err); // console.error(err);
     });
 }  
+else {
+     alert('Your browser does not support the Service-Worker!');
+}
