@@ -9855,3 +9855,12 @@ header .title {
   border-bottom: 2px solid #00b0ff; }
   .read-more:hover {
     color: #00b0ff; }
+.add-button {
+  position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: white;
+	width: 100%;
+	height: 40px;
+}
